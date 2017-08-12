@@ -17,7 +17,7 @@
 		34E1015A1F3EA8D800434CD7 /* UIWebView+GGLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E101541F3EA8D800434CD7 /* UIWebView+GGLoad.m */; };
 		34E1015B1F3EA8D800434CD7 /* UIWebView+GGNewTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E101561F3EA8D800434CD7 /* UIWebView+GGNewTab.m */; };
 		34E1015C1F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E101581F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m */; };
-		34E1015E1F3EA92200434CD7 /* GGNewTabModifyLinkTargets.js in Resources */ = {isa = PBXBuildFile; fileRef = 34E1015D1F3EA92200434CD7 /* GGNewTabModifyLinkTargets.js */; };
+		34E101641F3EECBB00434CD7 /* GGNewTabModifyLinkTargets.js in Resources */ = {isa = PBXBuildFile; fileRef = 34E101631F3EECBB00434CD7 /* GGNewTabModifyLinkTargets.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 		34E101561F3EA8D800434CD7 /* UIWebView+GGNewTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+GGNewTab.m"; sourceTree = "<group>"; };
 		34E101571F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPCookieStorage+GGCookie.h"; sourceTree = "<group>"; };
 		34E101581F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPCookieStorage+GGCookie.m"; sourceTree = "<group>"; };
-		34E1015D1F3EA92200434CD7 /* GGNewTabModifyLinkTargets.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GGNewTabModifyLinkTargets.js; sourceTree = "<group>"; };
+		34E101631F3EECBB00434CD7 /* GGNewTabModifyLinkTargets.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GGNewTabModifyLinkTargets.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +72,12 @@
 		34E1012B1F3EA1C800434CD7 /* GGCategories */ = {
 			isa = PBXGroup;
 			children = (
+				34E101431F3EA5E200434CD7 /* GGCategories */,
+				34E101621F3EECBB00434CD7 /* Resource */,
 				34E1012F1F3EA1C800434CD7 /* AppDelegate.h */,
 				34E101301F3EA1C800434CD7 /* AppDelegate.m */,
 				34E101321F3EA1C800434CD7 /* ViewController.h */,
 				34E101331F3EA1C800434CD7 /* ViewController.m */,
-				34E101431F3EA5E200434CD7 /* GGCategories */,
 				34E1012C1F3EA1C800434CD7 /* Supporting Files */,
 			);
 			path = GGCategories;
@@ -103,11 +104,18 @@
 				34E101541F3EA8D800434CD7 /* UIWebView+GGLoad.m */,
 				34E101551F3EA8D800434CD7 /* UIWebView+GGNewTab.h */,
 				34E101561F3EA8D800434CD7 /* UIWebView+GGNewTab.m */,
-				34E1015D1F3EA92200434CD7 /* GGNewTabModifyLinkTargets.js */,
 				34E101571F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.h */,
 				34E101581F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m */,
 			);
 			path = GGCategories;
+			sourceTree = "<group>";
+		};
+		34E101621F3EECBB00434CD7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				34E101631F3EECBB00434CD7 /* GGNewTabModifyLinkTargets.js */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +179,8 @@
 			files = (
 				34E1013C1F3EA1C800434CD7 /* LaunchScreen.storyboard in Resources */,
 				34E101391F3EA1C800434CD7 /* Assets.xcassets in Resources */,
+				34E101641F3EECBB00434CD7 /* GGNewTabModifyLinkTargets.js in Resources */,
 				34E101371F3EA1C800434CD7 /* Main.storyboard in Resources */,
-				34E1015E1F3EA92200434CD7 /* GGNewTabModifyLinkTargets.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

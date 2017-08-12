@@ -51,6 +51,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [webView gg_injectAndExecuteNewTabJSCode];
+    NSLog(@"脚本已注入，可以打开新标签了");
 }
 
 @end
