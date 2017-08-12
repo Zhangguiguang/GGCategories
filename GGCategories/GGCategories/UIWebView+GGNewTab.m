@@ -7,13 +7,15 @@
 //
 
 #import "UIWebView+GGNewTab.h"
+#import "GGCategories.h"
 
 @implementation UIWebView (GGNewTab)
 static NSString * const GGNewTabScheme = @"ggnewtab";
 static NSString *GGNewTabJSCode;
 - (void)gg_injectAndExecuteNewTabJSCode {
     if (GGNewTabJSCode == nil) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"GGNewTabModifyLinkTargets" ofType:@"js"];
+        NSBundle *bundle = [NSBundle bundleForClass:[GGCategories class]];
+        NSString *path = [bundle pathForResource:@"GGNewTabModifyLinkTargets" ofType:@"js"];
         GGNewTabJSCode = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     }
     
