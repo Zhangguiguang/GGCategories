@@ -7,23 +7,50 @@
 //
 
 #import "ViewController.h"
+#import "UIWebView+GGNewTab.h"
 
-@interface ViewController ()
-
+@interface ViewController () <UIWebViewDelegate>
+@property (nonatomic, strong) UIWebView *webView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    _webView = [[UIWebView alloc] init];
+    _webView.backgroundColor = [UIColor redColor];
+    _webView.delegate = self;
+    [self.view addSubview:_webView];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    _webView.bounds = CGRectMake(0, 0, 300, 400);
+    _webView.center = self.view.center;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSString *URLString = @"https://app.fromfactory.club/product_list";
+    NSURL *URL = [NSURL URLWithString:URLString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    [_webView loadRequest:request];
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    NSURL *URL = [webView gg_getNewTabURLFromRequest:request];
+    if (URL) {
+        NSLog(@"打开新标签 ： %@", URL.absoluteString);
+        return NO;
+    }
+    return YES;
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [webView gg_injectAndExecuteNewTabJSCode];
+}
 
 @end

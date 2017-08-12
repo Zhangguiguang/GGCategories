@@ -13,6 +13,11 @@
 		34E101371F3EA1C800434CD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34E101351F3EA1C800434CD7 /* Main.storyboard */; };
 		34E101391F3EA1C800434CD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34E101381F3EA1C800434CD7 /* Assets.xcassets */; };
 		34E1013C1F3EA1C800434CD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34E1013A1F3EA1C800434CD7 /* LaunchScreen.storyboard */; };
+		34E101591F3EA8D800434CD7 /* UIWebView+GGProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E101521F3EA8D800434CD7 /* UIWebView+GGProperty.m */; };
+		34E1015A1F3EA8D800434CD7 /* UIWebView+GGLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E101541F3EA8D800434CD7 /* UIWebView+GGLoad.m */; };
+		34E1015B1F3EA8D800434CD7 /* UIWebView+GGNewTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E101561F3EA8D800434CD7 /* UIWebView+GGNewTab.m */; };
+		34E1015C1F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E101581F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m */; };
+		34E1015E1F3EA92200434CD7 /* GGNewTabModifyLinkTargets.js in Resources */ = {isa = PBXBuildFile; fileRef = 34E1015D1F3EA92200434CD7 /* GGNewTabModifyLinkTargets.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,15 @@
 		34E101381F3EA1C800434CD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34E1013B1F3EA1C800434CD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34E1013D1F3EA1C800434CD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34E101511F3EA8D800434CD7 /* UIWebView+GGProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+GGProperty.h"; sourceTree = "<group>"; };
+		34E101521F3EA8D800434CD7 /* UIWebView+GGProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+GGProperty.m"; sourceTree = "<group>"; };
+		34E101531F3EA8D800434CD7 /* UIWebView+GGLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+GGLoad.h"; sourceTree = "<group>"; };
+		34E101541F3EA8D800434CD7 /* UIWebView+GGLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+GGLoad.m"; sourceTree = "<group>"; };
+		34E101551F3EA8D800434CD7 /* UIWebView+GGNewTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+GGNewTab.h"; sourceTree = "<group>"; };
+		34E101561F3EA8D800434CD7 /* UIWebView+GGNewTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+GGNewTab.m"; sourceTree = "<group>"; };
+		34E101571F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPCookieStorage+GGCookie.h"; sourceTree = "<group>"; };
+		34E101581F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPCookieStorage+GGCookie.m"; sourceTree = "<group>"; };
+		34E1015D1F3EA92200434CD7 /* GGNewTabModifyLinkTargets.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GGNewTabModifyLinkTargets.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +76,7 @@
 				34E101301F3EA1C800434CD7 /* AppDelegate.m */,
 				34E101321F3EA1C800434CD7 /* ViewController.h */,
 				34E101331F3EA1C800434CD7 /* ViewController.m */,
-				34E101351F3EA1C800434CD7 /* Main.storyboard */,
-				34E101381F3EA1C800434CD7 /* Assets.xcassets */,
-				34E1013A1F3EA1C800434CD7 /* LaunchScreen.storyboard */,
-				34E1013D1F3EA1C800434CD7 /* Info.plist */,
+				34E101431F3EA5E200434CD7 /* GGCategories */,
 				34E1012C1F3EA1C800434CD7 /* Supporting Files */,
 			);
 			path = GGCategories;
@@ -74,9 +85,29 @@
 		34E1012C1F3EA1C800434CD7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				34E101381F3EA1C800434CD7 /* Assets.xcassets */,
+				34E101351F3EA1C800434CD7 /* Main.storyboard */,
+				34E1013A1F3EA1C800434CD7 /* LaunchScreen.storyboard */,
+				34E1013D1F3EA1C800434CD7 /* Info.plist */,
 				34E1012D1F3EA1C800434CD7 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34E101431F3EA5E200434CD7 /* GGCategories */ = {
+			isa = PBXGroup;
+			children = (
+				34E101511F3EA8D800434CD7 /* UIWebView+GGProperty.h */,
+				34E101521F3EA8D800434CD7 /* UIWebView+GGProperty.m */,
+				34E101531F3EA8D800434CD7 /* UIWebView+GGLoad.h */,
+				34E101541F3EA8D800434CD7 /* UIWebView+GGLoad.m */,
+				34E101551F3EA8D800434CD7 /* UIWebView+GGNewTab.h */,
+				34E101561F3EA8D800434CD7 /* UIWebView+GGNewTab.m */,
+				34E1015D1F3EA92200434CD7 /* GGNewTabModifyLinkTargets.js */,
+				34E101571F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.h */,
+				34E101581F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m */,
+			);
+			path = GGCategories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +172,7 @@
 				34E1013C1F3EA1C800434CD7 /* LaunchScreen.storyboard in Resources */,
 				34E101391F3EA1C800434CD7 /* Assets.xcassets in Resources */,
 				34E101371F3EA1C800434CD7 /* Main.storyboard in Resources */,
+				34E1015E1F3EA92200434CD7 /* GGNewTabModifyLinkTargets.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E1015C1F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m in Sources */,
 				34E101341F3EA1C800434CD7 /* ViewController.m in Sources */,
+				34E1015A1F3EA8D800434CD7 /* UIWebView+GGLoad.m in Sources */,
+				34E1015B1F3EA8D800434CD7 /* UIWebView+GGNewTab.m in Sources */,
 				34E101311F3EA1C800434CD7 /* AppDelegate.m in Sources */,
+				34E101591F3EA8D800434CD7 /* UIWebView+GGProperty.m in Sources */,
 				34E1012E1F3EA1C800434CD7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
