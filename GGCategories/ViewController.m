@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIWebView+GGNewTab.h"
+#import "UIView+GGBorder.h"
 
 @interface ViewController () <UIWebViewDelegate>
 @property (nonatomic, strong) UIWebView *webView;
@@ -19,15 +20,20 @@
     [super viewDidLoad];
     
     _webView = [[UIWebView alloc] init];
-    _webView.backgroundColor = [UIColor redColor];
+    _webView.backgroundColor = [UIColor grayColor];
     _webView.delegate = self;
     [self.view addSubview:_webView];
+    
+    [_webView gg_borderWithColor:[UIColor redColor] width:10 edge:UIRectEdgeAll];
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     _webView.bounds = CGRectMake(0, 0, 300, 400);
     _webView.center = self.view.center;
+    
+    // 建议在视图布局改变之后，重新给edge赋值
+    _webView.gg_borderEdge = UIRectEdgeAll;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

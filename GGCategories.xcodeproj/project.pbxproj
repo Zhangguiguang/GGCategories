@@ -19,6 +19,9 @@
 		34E1015C1F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E101581F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m */; };
 		34E1016B1F3F063600434CD7 /* GGCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E1016A1F3F063600434CD7 /* GGCategories.m */; };
 		34E1016E1F3F06E600434CD7 /* GGNewTabModifyLinkTargets.js in Resources */ = {isa = PBXBuildFile; fileRef = 34E1016D1F3F06E600434CD7 /* GGNewTabModifyLinkTargets.js */; };
+		34E30DA21F428D5700380DD6 /* UIView+GGBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DA11F428D5700380DD6 /* UIView+GGBorder.m */; };
+		34E30DA51F428E4400380DD6 /* NSString+GGMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DA41F428E4400380DD6 /* NSString+GGMD5.m */; };
+		34E30DA81F428EEF00380DD6 /* UIViewController+GGTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DA71F428EEF00380DD6 /* UIViewController+GGTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,12 @@
 		34E101691F3F063600434CD7 /* GGCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGCategories.h; sourceTree = "<group>"; };
 		34E1016A1F3F063600434CD7 /* GGCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGCategories.m; sourceTree = "<group>"; };
 		34E1016D1F3F06E600434CD7 /* GGNewTabModifyLinkTargets.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GGNewTabModifyLinkTargets.js; sourceTree = "<group>"; };
+		34E30DA01F428D5700380DD6 /* UIView+GGBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GGBorder.h"; sourceTree = "<group>"; };
+		34E30DA11F428D5700380DD6 /* UIView+GGBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GGBorder.m"; sourceTree = "<group>"; };
+		34E30DA31F428E4400380DD6 /* NSString+GGMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GGMD5.h"; sourceTree = "<group>"; };
+		34E30DA41F428E4400380DD6 /* NSString+GGMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GGMD5.m"; sourceTree = "<group>"; };
+		34E30DA61F428EEF00380DD6 /* UIViewController+GGTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GGTransition.h"; sourceTree = "<group>"; };
+		34E30DA71F428EEF00380DD6 /* UIViewController+GGTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GGTransition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +118,12 @@
 				34E101541F3EA8D800434CD7 /* UIWebView+GGLoad.m */,
 				34E101551F3EA8D800434CD7 /* UIWebView+GGNewTab.h */,
 				34E101561F3EA8D800434CD7 /* UIWebView+GGNewTab.m */,
+				34E30DA01F428D5700380DD6 /* UIView+GGBorder.h */,
+				34E30DA11F428D5700380DD6 /* UIView+GGBorder.m */,
+				34E30DA31F428E4400380DD6 /* NSString+GGMD5.h */,
+				34E30DA41F428E4400380DD6 /* NSString+GGMD5.m */,
+				34E30DA61F428EEF00380DD6 /* UIViewController+GGTransition.h */,
+				34E30DA71F428EEF00380DD6 /* UIViewController+GGTransition.m */,
 				34E101571F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.h */,
 				34E101581F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m */,
 			);
@@ -198,9 +213,12 @@
 			files = (
 				34E1015C1F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m in Sources */,
 				34E101341F3EA1C800434CD7 /* ViewController.m in Sources */,
+				34E30DA21F428D5700380DD6 /* UIView+GGBorder.m in Sources */,
 				34E1015A1F3EA8D800434CD7 /* UIWebView+GGLoad.m in Sources */,
 				34E1015B1F3EA8D800434CD7 /* UIWebView+GGNewTab.m in Sources */,
+				34E30DA81F428EEF00380DD6 /* UIViewController+GGTransition.m in Sources */,
 				34E101311F3EA1C800434CD7 /* AppDelegate.m in Sources */,
+				34E30DA51F428E4400380DD6 /* NSString+GGMD5.m in Sources */,
 				34E1016B1F3F063600434CD7 /* GGCategories.m in Sources */,
 				34E101591F3EA8D800434CD7 /* UIWebView+GGProperty.m in Sources */,
 				34E1012E1F3EA1C800434CD7 /* main.m in Sources */,
@@ -364,6 +382,7 @@
 				34E101421F3EA1C800434CD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
