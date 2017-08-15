@@ -22,6 +22,14 @@
 		34E30DA21F428D5700380DD6 /* UIView+GGBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DA11F428D5700380DD6 /* UIView+GGBorder.m */; };
 		34E30DA51F428E4400380DD6 /* NSString+GGMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DA41F428E4400380DD6 /* NSString+GGMD5.m */; };
 		34E30DA81F428EEF00380DD6 /* UIViewController+GGTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DA71F428EEF00380DD6 /* UIViewController+GGTransition.m */; };
+		34E30DAB1F42C12800380DD6 /* UIImage+GGTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DAA1F42C12800380DD6 /* UIImage+GGTint.m */; };
+		34E30DAE1F42C5B800380DD6 /* UIImage+GGResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DAD1F42C5B800380DD6 /* UIImage+GGResize.m */; };
+		34E30DB11F42CB4D00380DD6 /* UIWebView_NewTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DB01F42CB4D00380DD6 /* UIWebView_NewTabVC.m */; };
+		34E30DBA1F42CCD200380DD6 /* UIImage_TintVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DB91F42CCD200380DD6 /* UIImage_TintVC.m */; };
+		34E30DBD1F42CD1200380DD6 /* UIView_BorderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DBC1F42CD1200380DD6 /* UIView_BorderVC.m */; };
+		34E30DC21F42D2F500380DD6 /* icon_man.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E30DBF1F42D2F500380DD6 /* icon_man.png */; };
+		34E30DC31F42D2F500380DD6 /* icon_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E30DC01F42D2F500380DD6 /* icon_selected.png */; };
+		34E30DC61F42D30B00380DD6 /* tab_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E30DC51F42D30B00380DD6 /* tab_home.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +60,19 @@
 		34E30DA41F428E4400380DD6 /* NSString+GGMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GGMD5.m"; sourceTree = "<group>"; };
 		34E30DA61F428EEF00380DD6 /* UIViewController+GGTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GGTransition.h"; sourceTree = "<group>"; };
 		34E30DA71F428EEF00380DD6 /* UIViewController+GGTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GGTransition.m"; sourceTree = "<group>"; };
+		34E30DA91F42C12800380DD6 /* UIImage+GGTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GGTint.h"; sourceTree = "<group>"; };
+		34E30DAA1F42C12800380DD6 /* UIImage+GGTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GGTint.m"; sourceTree = "<group>"; };
+		34E30DAC1F42C5B800380DD6 /* UIImage+GGResize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GGResize.h"; sourceTree = "<group>"; };
+		34E30DAD1F42C5B800380DD6 /* UIImage+GGResize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GGResize.m"; sourceTree = "<group>"; };
+		34E30DAF1F42CB4D00380DD6 /* UIWebView_NewTabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebView_NewTabVC.h; sourceTree = "<group>"; };
+		34E30DB01F42CB4D00380DD6 /* UIWebView_NewTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebView_NewTabVC.m; sourceTree = "<group>"; };
+		34E30DB81F42CCD200380DD6 /* UIImage_TintVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImage_TintVC.h; sourceTree = "<group>"; };
+		34E30DB91F42CCD200380DD6 /* UIImage_TintVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImage_TintVC.m; sourceTree = "<group>"; };
+		34E30DBB1F42CD1200380DD6 /* UIView_BorderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_BorderVC.h; sourceTree = "<group>"; };
+		34E30DBC1F42CD1200380DD6 /* UIView_BorderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_BorderVC.m; sourceTree = "<group>"; };
+		34E30DBF1F42D2F500380DD6 /* icon_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_man.png; sourceTree = "<group>"; };
+		34E30DC01F42D2F500380DD6 /* icon_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_selected.png; sourceTree = "<group>"; };
+		34E30DC51F42D30B00380DD6 /* tab_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_home.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +105,19 @@
 		34E1012B1F3EA1C800434CD7 /* GGCategories */ = {
 			isa = PBXGroup;
 			children = (
+				34E30DBE1F42D2EA00380DD6 /* Image */,
 				34E1016C1F3F06E600434CD7 /* Resources */,
 				34E101431F3EA5E200434CD7 /* GGCategories */,
 				34E1012F1F3EA1C800434CD7 /* AppDelegate.h */,
 				34E101301F3EA1C800434CD7 /* AppDelegate.m */,
 				34E101321F3EA1C800434CD7 /* ViewController.h */,
 				34E101331F3EA1C800434CD7 /* ViewController.m */,
+				34E30DAF1F42CB4D00380DD6 /* UIWebView_NewTabVC.h */,
+				34E30DB01F42CB4D00380DD6 /* UIWebView_NewTabVC.m */,
+				34E30DB81F42CCD200380DD6 /* UIImage_TintVC.h */,
+				34E30DB91F42CCD200380DD6 /* UIImage_TintVC.m */,
+				34E30DBB1F42CD1200380DD6 /* UIView_BorderVC.h */,
+				34E30DBC1F42CD1200380DD6 /* UIView_BorderVC.m */,
 				34E1012C1F3EA1C800434CD7 /* Supporting Files */,
 			);
 			path = GGCategories;
@@ -118,6 +146,10 @@
 				34E101541F3EA8D800434CD7 /* UIWebView+GGLoad.m */,
 				34E101551F3EA8D800434CD7 /* UIWebView+GGNewTab.h */,
 				34E101561F3EA8D800434CD7 /* UIWebView+GGNewTab.m */,
+				34E30DA91F42C12800380DD6 /* UIImage+GGTint.h */,
+				34E30DAA1F42C12800380DD6 /* UIImage+GGTint.m */,
+				34E30DAC1F42C5B800380DD6 /* UIImage+GGResize.h */,
+				34E30DAD1F42C5B800380DD6 /* UIImage+GGResize.m */,
 				34E30DA01F428D5700380DD6 /* UIView+GGBorder.h */,
 				34E30DA11F428D5700380DD6 /* UIView+GGBorder.m */,
 				34E30DA31F428E4400380DD6 /* NSString+GGMD5.h */,
@@ -136,6 +168,16 @@
 				34E1016D1F3F06E600434CD7 /* GGNewTabModifyLinkTargets.js */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		34E30DBE1F42D2EA00380DD6 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				34E30DBF1F42D2F500380DD6 /* icon_man.png */,
+				34E30DC01F42D2F500380DD6 /* icon_selected.png */,
+				34E30DC51F42D30B00380DD6 /* tab_home.png */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +240,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				34E1013C1F3EA1C800434CD7 /* LaunchScreen.storyboard in Resources */,
+				34E30DC21F42D2F500380DD6 /* icon_man.png in Resources */,
 				34E101391F3EA1C800434CD7 /* Assets.xcassets in Resources */,
+				34E30DC61F42D30B00380DD6 /* tab_home.png in Resources */,
+				34E30DC31F42D2F500380DD6 /* icon_selected.png in Resources */,
 				34E1016E1F3F06E600434CD7 /* GGNewTabModifyLinkTargets.js in Resources */,
 				34E101371F3EA1C800434CD7 /* Main.storyboard in Resources */,
 			);
@@ -218,8 +263,13 @@
 				34E1015B1F3EA8D800434CD7 /* UIWebView+GGNewTab.m in Sources */,
 				34E30DA81F428EEF00380DD6 /* UIViewController+GGTransition.m in Sources */,
 				34E101311F3EA1C800434CD7 /* AppDelegate.m in Sources */,
+				34E30DAE1F42C5B800380DD6 /* UIImage+GGResize.m in Sources */,
 				34E30DA51F428E4400380DD6 /* NSString+GGMD5.m in Sources */,
+				34E30DAB1F42C12800380DD6 /* UIImage+GGTint.m in Sources */,
 				34E1016B1F3F063600434CD7 /* GGCategories.m in Sources */,
+				34E30DBD1F42CD1200380DD6 /* UIView_BorderVC.m in Sources */,
+				34E30DBA1F42CCD200380DD6 /* UIImage_TintVC.m in Sources */,
+				34E30DB11F42CB4D00380DD6 /* UIWebView_NewTabVC.m in Sources */,
 				34E101591F3EA8D800434CD7 /* UIWebView+GGProperty.m in Sources */,
 				34E1012E1F3EA1C800434CD7 /* main.m in Sources */,
 			);

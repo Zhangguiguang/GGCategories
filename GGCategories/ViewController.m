@@ -7,57 +7,58 @@
 //
 
 #import "ViewController.h"
-#import "UIWebView+GGNewTab.h"
-#import "UIView+GGBorder.h"
 
-@interface ViewController () <UIWebViewDelegate>
-@property (nonatomic, strong) UIWebView *webView;
+static NSString * const TableViewCellIdentifier = @"TableViewCellIdentifier";
+
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray<NSArray *> *dataArray;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     
-    _webView = [[UIWebView alloc] init];
-    _webView.backgroundColor = [UIColor grayColor];
-    _webView.delegate = self;
-    [self.view addSubview:_webView];
+    _tableView = [[UITableView alloc] init];
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:TableViewCellIdentifier];
+    [self.view addSubview:_tableView];
     
-    [_webView gg_borderWithColor:[UIColor redColor] width:10 edge:UIRectEdgeAll];
+    _dataArray = @[@[@"UIWebView+GGNewTab", @"UIWebView_NewTabVC"],
+                   @[@"UIImage+GGTint", @"UIImage_TintVC"],
+                   @[@"UIView+GGBorder", @"UIView_BorderVC"],
+                   
+                   ];
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    _webView.bounds = CGRectMake(0, 0, 300, 400);
-    _webView.center = self.view.center;
-    
-    // 建议在视图布局改变之后，重新给edge赋值
-    _webView.gg_borderEdge = UIRectEdgeAll;
+    _tableView.frame = self.view.frame;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    NSString *URLString = @"https://app.fromfactory.club/product_list";
-    NSURL *URL = [NSURL URLWithString:URLString];
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-    
-    [_webView loadRequest:request];
+#pragma mark -
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _dataArray.count;
 }
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    NSURL *URL = [webView gg_getNewTabURLFromRequest:request];
-    if (URL) {
-        NSLog(@"打开新标签 ： %@", URL.absoluteString);
-        return NO;
-    }
-    return YES;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellIdentifier forIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    NSArray *data = _dataArray[indexPath.row];
+    cell.textLabel.text = data[0];
+    
+    return cell;
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [webView gg_injectAndExecuteNewTabJSCode];
-    NSLog(@"脚本已注入，可以打开新标签了");
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *data = _dataArray[indexPath.row];
+    Class vcClass = NSClassFromString(data[1]);
+    UIViewController *vc = [[vcClass alloc] init];
+    [self showViewController:vc sender:nil];
 }
 
 @end
