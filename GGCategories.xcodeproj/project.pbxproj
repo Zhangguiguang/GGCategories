@@ -30,6 +30,11 @@
 		34E30DC21F42D2F500380DD6 /* icon_man.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E30DBF1F42D2F500380DD6 /* icon_man.png */; };
 		34E30DC31F42D2F500380DD6 /* icon_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E30DC01F42D2F500380DD6 /* icon_selected.png */; };
 		34E30DC61F42D30B00380DD6 /* tab_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E30DC51F42D30B00380DD6 /* tab_home.png */; };
+		34E30DCC1F43FE8800380DD6 /* UIView+JKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DCB1F43FE8800380DD6 /* UIView+JKFrame.m */; };
+		34E30DCF1F43FEC900380DD6 /* NSString+JKSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DCE1F43FEC900380DD6 /* NSString+JKSize.m */; };
+		34E30DD21F43FEDF00380DD6 /* UIView+JKVisuals.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DD11F43FEDF00380DD6 /* UIView+JKVisuals.m */; };
+		34E30DD51F43FEFE00380DD6 /* NSString+JKURLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DD41F43FEFE00380DD6 /* NSString+JKURLEncode.m */; };
+		34E30DD81F43FF1A00380DD6 /* UIScreen+JKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E30DD71F43FF1A00380DD6 /* UIScreen+JKFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +78,16 @@
 		34E30DBF1F42D2F500380DD6 /* icon_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_man.png; sourceTree = "<group>"; };
 		34E30DC01F42D2F500380DD6 /* icon_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_selected.png; sourceTree = "<group>"; };
 		34E30DC51F42D30B00380DD6 /* tab_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_home.png; sourceTree = "<group>"; };
+		34E30DCA1F43FE8800380DD6 /* UIView+JKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKFrame.h"; sourceTree = "<group>"; };
+		34E30DCB1F43FE8800380DD6 /* UIView+JKFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKFrame.m"; sourceTree = "<group>"; };
+		34E30DCD1F43FEC900380DD6 /* NSString+JKSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKSize.h"; sourceTree = "<group>"; };
+		34E30DCE1F43FEC900380DD6 /* NSString+JKSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKSize.m"; sourceTree = "<group>"; };
+		34E30DD01F43FEDF00380DD6 /* UIView+JKVisuals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKVisuals.h"; sourceTree = "<group>"; };
+		34E30DD11F43FEDF00380DD6 /* UIView+JKVisuals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKVisuals.m"; sourceTree = "<group>"; };
+		34E30DD31F43FEFE00380DD6 /* NSString+JKURLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKURLEncode.h"; sourceTree = "<group>"; };
+		34E30DD41F43FEFE00380DD6 /* NSString+JKURLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKURLEncode.m"; sourceTree = "<group>"; };
+		34E30DD61F43FF1A00380DD6 /* UIScreen+JKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+JKFrame.h"; sourceTree = "<group>"; };
+		34E30DD71F43FF1A00380DD6 /* UIScreen+JKFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+JKFrame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +153,16 @@
 		34E101431F3EA5E200434CD7 /* GGCategories */ = {
 			isa = PBXGroup;
 			children = (
+				34E30DD61F43FF1A00380DD6 /* UIScreen+JKFrame.h */,
+				34E30DD71F43FF1A00380DD6 /* UIScreen+JKFrame.m */,
+				34E30DD31F43FEFE00380DD6 /* NSString+JKURLEncode.h */,
+				34E30DD41F43FEFE00380DD6 /* NSString+JKURLEncode.m */,
+				34E30DD01F43FEDF00380DD6 /* UIView+JKVisuals.h */,
+				34E30DD11F43FEDF00380DD6 /* UIView+JKVisuals.m */,
+				34E30DCD1F43FEC900380DD6 /* NSString+JKSize.h */,
+				34E30DCE1F43FEC900380DD6 /* NSString+JKSize.m */,
+				34E30DCA1F43FE8800380DD6 /* UIView+JKFrame.h */,
+				34E30DCB1F43FE8800380DD6 /* UIView+JKFrame.m */,
 				34E101691F3F063600434CD7 /* GGCategories.h */,
 				34E1016A1F3F063600434CD7 /* GGCategories.m */,
 				34E101511F3EA8D800434CD7 /* UIWebView+GGProperty.h */,
@@ -261,17 +286,22 @@
 				34E30DA21F428D5700380DD6 /* UIView+GGBorder.m in Sources */,
 				34E1015A1F3EA8D800434CD7 /* UIWebView+GGLoad.m in Sources */,
 				34E1015B1F3EA8D800434CD7 /* UIWebView+GGNewTab.m in Sources */,
+				34E30DD81F43FF1A00380DD6 /* UIScreen+JKFrame.m in Sources */,
 				34E30DA81F428EEF00380DD6 /* UIViewController+GGTransition.m in Sources */,
+				34E30DD51F43FEFE00380DD6 /* NSString+JKURLEncode.m in Sources */,
+				34E30DCC1F43FE8800380DD6 /* UIView+JKFrame.m in Sources */,
 				34E101311F3EA1C800434CD7 /* AppDelegate.m in Sources */,
 				34E30DAE1F42C5B800380DD6 /* UIImage+GGResize.m in Sources */,
 				34E30DA51F428E4400380DD6 /* NSString+GGMD5.m in Sources */,
 				34E30DAB1F42C12800380DD6 /* UIImage+GGTint.m in Sources */,
+				34E30DCF1F43FEC900380DD6 /* NSString+JKSize.m in Sources */,
 				34E1016B1F3F063600434CD7 /* GGCategories.m in Sources */,
 				34E30DBD1F42CD1200380DD6 /* UIView_BorderVC.m in Sources */,
 				34E30DBA1F42CCD200380DD6 /* UIImage_TintVC.m in Sources */,
 				34E30DB11F42CB4D00380DD6 /* UIWebView_NewTabVC.m in Sources */,
 				34E101591F3EA8D800434CD7 /* UIWebView+GGProperty.m in Sources */,
 				34E1012E1F3EA1C800434CD7 /* main.m in Sources */,
+				34E30DD21F43FEDF00380DD6 /* UIView+JKVisuals.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

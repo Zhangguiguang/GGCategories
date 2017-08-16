@@ -1,3 +1,10 @@
+//
+//  UIImage+GGTint.h
+//  GGCategories
+//
+//  Created by 张贵广 on 2017/8/15.
+//  Copyright © 2017年 GG. All rights reserved.
+//
 
 // 设置image颜色为指定颜色
  
