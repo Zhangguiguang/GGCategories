@@ -37,7 +37,7 @@
             [self.layer insertSublayer:line atIndex:0];
         }
         UIRectEdge edge = [self gg_updateLine:line toEdge:lineEdges];
-        line.name = [NSString stringWithFormat:@"ggline%lu", (NSUInteger)edge];
+        line.name = [NSString stringWithFormat:@"ggline%lu", (unsigned long)edge];
         lineEdges -= edge;
     }
 }

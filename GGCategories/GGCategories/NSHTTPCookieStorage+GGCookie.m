@@ -7,6 +7,7 @@
 //
 
 #import "NSHTTPCookieStorage+GGCookie.h"
+#import <UIKit/UIKit.h>
 
 @implementation NSHTTPCookieStorage (GGCookie)
 
@@ -42,6 +43,10 @@ static NSString *GGCookieDomain;
 + (void)gg_deleteCookieWithName:(NSString *)name {
     NSHTTPCookie *cookie = [self gg_getCookieObjectWithName:name];
     [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
+    UIWebView *webView = [[UIWebView alloc] init];
+    NSString *clearCookieJS = [NSString stringWithFormat:@"document.cookie='%@='", name];
+    [webView stringByEvaluatingJavaScriptFromString:clearCookieJS];
+    webView = nil;
 }
 
 // private function
