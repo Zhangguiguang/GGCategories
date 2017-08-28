@@ -36,28 +36,22 @@ static NSString *GGCookieDomain;
 }
 
 + (NSString *)gg_getCookieWithName:(NSString *)name {
-    NSHTTPCookie *cookie = [self gg_getCookieObjectWithName:name];
-    return [cookie value];
-}
-
-+ (void)gg_deleteCookieWithName:(NSString *)name {
-    NSHTTPCookie *cookie = [self gg_getCookieObjectWithName:name];
-    [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
-    UIWebView *webView = [[UIWebView alloc] init];
-    NSString *clearCookieJS = [NSString stringWithFormat:@"document.cookie='%@='", name];
-    [webView stringByEvaluatingJavaScriptFromString:clearCookieJS];
-    webView = nil;
-}
-
-// private function
-+ (NSHTTPCookie *)gg_getCookieObjectWithName:(NSString *)name {
     NSArray<NSHTTPCookie *> *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:GGCookieURL];
     for (NSHTTPCookie *cookie in cookies) {
         if ([cookie.name isEqualToString:name]) {
-            return cookie;
+            return [cookie value];
         }
     }
     return nil;
+}
+
++ (void)gg_deleteCookieWithName:(NSString *)name {
+    NSArray<NSHTTPCookie *> *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:GGCookieURL];
+    [cookies enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(NSHTTPCookie *cookie, NSUInteger idx, BOOL *stop) {
+        if ([cookie.name isEqualToString:name]) {
+            [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
+        }
+    }];
 }
 
 @end
