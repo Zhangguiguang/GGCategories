@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   
   s.source       = { :git => "https://github.com/Zhangguiguang/GGCategories.git", :tag => s.version }
 
-  s.source_files  = "GGCategories/GGCategories/*"
+  s.source_files  = "GGCategories/GGCategories/*{h,m}"
 
   s.public_header_files = "GGCategories/GGCategories/*.h"
 
