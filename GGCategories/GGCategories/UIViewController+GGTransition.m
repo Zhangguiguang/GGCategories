@@ -20,14 +20,18 @@
 
 @end
 
-
 @implementation UIViewController (GGTransition)
 
 - (void)gg_dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion {
     if (flag) {
         [self.view.window.layer gg_addTransitionDuration:0.25 type:nil subtype:nil];
     }
-    [self dismissViewControllerAnimated:NO completion:completion];
+    if (self.ggPresentingVC) {
+        [self.ggPresentingVC dismissViewControllerAnimated:NO completion:nil];
+    } else {
+        [self dismissViewControllerAnimated:NO completion:nil];
+    }
+    //[self dismissViewControllerAnimated:NO completion:completion];
 }
 
 - (void)gg_presentViewController:(UIViewController *)vc animated:(BOOL)flag completion:(void (^)(void))completion {
@@ -35,6 +39,14 @@
         [self.view.window.layer gg_addTransitionDuration:0.25 type:nil subtype:nil];
     }
     [self presentViewController:vc animated:NO completion:completion];
+}
+
+static void *ggPresentingVCKey = &ggPresentingVCKey;
+- (void)setGgPresentingVC:(UIViewController *)ggPresentingVC {
+    objc_setAssociatedObject(self, &ggPresentingVCKey, ggPresentingVC, OBJC_ASSOCIATION_RETAIN);
+}
+- (UIViewController *)ggPresentingVC {
+    return objc_getAssociatedObject(self, &ggPresentingVCKey);
 }
 
 @end

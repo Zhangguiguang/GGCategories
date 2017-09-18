@@ -16,6 +16,8 @@
 
 @interface UIViewController (GGTransition)
 
+@property (nonatomic, strong) UIViewController *ggPresentingVC;
+
 - (void)gg_dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion;
 - (void)gg_presentViewController:(UIViewController *)vc animated:(BOOL)flag completion:(void (^)(void))completion;
 

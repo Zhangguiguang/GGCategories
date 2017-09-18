@@ -26,15 +26,15 @@ static NSString *GGNewTabJSCode;
 
 - (NSURL *)gg_getNewTabURLFromRequest:(NSURLRequest *)request {
     NSURL *URL = [request URL];
-    if ([[URL scheme] isEqualToString:GGNewTabScheme]) {
-        NSString *URLString = [[URL resourceSpecifier] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        
-        NSString *baseURLString = [self stringByEvaluatingJavaScriptFromString:@"document.location.href"];
-        NSURL *baseURL = [NSURL URLWithString:baseURLString];
-        URL = [NSURL URLWithString:URLString relativeToURL:baseURL];
-        return URL;
+    if ([[URL scheme] isEqualToString:GGNewTabScheme] == NO) {
+        return nil;
     }
-    return nil;
+    
+    NSString *URLString = [[URL resourceSpecifier] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *baseURLString = [self stringByEvaluatingJavaScriptFromString:@"document.location.href"];
+    NSURL *baseURL = [NSURL URLWithString:baseURLString];
+    URL = [NSURL URLWithString:URLString relativeToURL:baseURL];
+    return URL;
 }
 
 @end
