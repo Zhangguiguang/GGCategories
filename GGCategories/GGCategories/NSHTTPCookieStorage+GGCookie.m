@@ -7,7 +7,6 @@
 //
 
 #import "NSHTTPCookieStorage+GGCookie.h"
-#import <UIKit/UIKit.h>
 
 @implementation NSHTTPCookieStorage (GGCookie)
 

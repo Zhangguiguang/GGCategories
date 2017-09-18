@@ -7,7 +7,6 @@
 //
 
 #import "UIWebView+GGLoad.h"
-#import <objc/runtime.h>
 
 @implementation UIWebView (GGLoad)
 
