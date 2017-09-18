@@ -7,6 +7,7 @@
 //
 
 #import "UIViewController+GGTransition.h"
+#import <objc/runtime.h>
 
 @implementation CALayer (GGTransition)
 
