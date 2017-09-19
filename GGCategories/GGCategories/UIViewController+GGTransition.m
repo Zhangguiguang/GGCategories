@@ -21,6 +21,10 @@
 
 @end
 
+@interface UIViewController ()
+@property (nonatomic, strong) UIViewController *ggPresentingVC;
+@end
+
 @implementation UIViewController (GGTransition)
 
 - (void)gg_dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion {
@@ -32,7 +36,6 @@
     } else {
         [self dismissViewControllerAnimated:NO completion:nil];
     }
-    //[self dismissViewControllerAnimated:NO completion:completion];
 }
 
 - (void)gg_presentViewController:(UIViewController *)vc animated:(BOOL)flag completion:(void (^)(void))completion {
@@ -42,9 +45,18 @@
     [self presentViewController:vc animated:NO completion:completion];
 }
 
+- (void)gg_dismissCurrentAndPresentViewController:(UIViewController *)vc animated:(BOOL)flag completion:(void (^)(void))completion {
+    if (flag) {
+        [self.view.window.layer gg_addTransitionDuration:0.25 type:nil subtype:nil];
+    }
+    [self presentViewController:vc animated:NO completion:completion];
+    vc.ggPresentingVC = self.ggPresentingVC ? : self.presentingViewController;
+}
+
+#pragma mark - setter getter
 static void *ggPresentingVCKey = &ggPresentingVCKey;
 - (void)setGgPresentingVC:(UIViewController *)ggPresentingVC {
-    objc_setAssociatedObject(self, &ggPresentingVCKey, ggPresentingVC, OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self, &ggPresentingVCKey, ggPresentingVC, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (UIViewController *)ggPresentingVC {
     return objc_getAssociatedObject(self, &ggPresentingVCKey);
