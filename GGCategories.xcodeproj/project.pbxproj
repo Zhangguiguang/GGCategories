@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3442CC9C1F735425004710E3 /* UIView+GGContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3442CC9B1F735425004710E3 /* UIView+GGContext.m */; };
 		34E1012E1F3EA1C800434CD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E1012D1F3EA1C800434CD7 /* main.m */; };
 		34E101311F3EA1C800434CD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E101301F3EA1C800434CD7 /* AppDelegate.m */; };
 		34E101341F3EA1C800434CD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E101331F3EA1C800434CD7 /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3442CC9A1F735425004710E3 /* UIView+GGContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GGContext.h"; sourceTree = "<group>"; };
+		3442CC9B1F735425004710E3 /* UIView+GGContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GGContext.m"; sourceTree = "<group>"; };
 		34E101291F3EA1C800434CD7 /* GGCategories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGCategories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34E1012D1F3EA1C800434CD7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		34E1012F1F3EA1C800434CD7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 				34E30DA71F428EEF00380DD6 /* UIViewController+GGTransition.m */,
 				34E101571F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.h */,
 				34E101581F3EA8D800434CD7 /* NSHTTPCookieStorage+GGCookie.m */,
+				3442CC9A1F735425004710E3 /* UIView+GGContext.h */,
+				3442CC9B1F735425004710E3 /* UIView+GGContext.m */,
 			);
 			path = GGCategories;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				34E1015A1F3EA8D800434CD7 /* UIWebView+GGLoad.m in Sources */,
 				34E1015B1F3EA8D800434CD7 /* UIWebView+GGNewTab.m in Sources */,
 				34E30DD81F43FF1A00380DD6 /* UIScreen+JKFrame.m in Sources */,
+				3442CC9C1F735425004710E3 /* UIView+GGContext.m in Sources */,
 				34E30DA81F428EEF00380DD6 /* UIViewController+GGTransition.m in Sources */,
 				34E30DD51F43FEFE00380DD6 /* NSString+JKURLEncode.m in Sources */,
 				34E30DCC1F43FE8800380DD6 /* UIView+JKFrame.m in Sources */,
