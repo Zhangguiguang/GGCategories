@@ -28,28 +28,22 @@
 @implementation UIViewController (GGTransition)
 
 - (void)gg_dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion {
-    if (flag) {
-        [self.view.window.layer gg_addTransitionDuration:0.25 type:nil subtype:nil];
-    }
+    [self setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
     if (self.ggPresentingVC) {
-        [self.ggPresentingVC dismissViewControllerAnimated:NO completion:nil];
+        [self.ggPresentingVC dismissViewControllerAnimated:flag completion:nil];
     } else {
-        [self dismissViewControllerAnimated:NO completion:nil];
+        [self dismissViewControllerAnimated:flag completion:nil];
     }
 }
 
 - (void)gg_presentViewController:(UIViewController *)vc animated:(BOOL)flag completion:(void (^)(void))completion {
-    if (flag) {
-        [self.view.window.layer gg_addTransitionDuration:0.25 type:nil subtype:nil];
-    }
-    [self presentViewController:vc animated:NO completion:completion];
+    [vc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    [self presentViewController:vc animated:flag completion:completion];
 }
 
 - (void)gg_dismissCurrentAndPresentViewController:(UIViewController *)vc animated:(BOOL)flag completion:(void (^)(void))completion {
-    if (flag) {
-        [self.view.window.layer gg_addTransitionDuration:0.25 type:nil subtype:nil];
-    }
-    [self presentViewController:vc animated:NO completion:completion];
+    [vc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    [self presentViewController:vc animated:flag completion:completion];
     vc.ggPresentingVC = self.ggPresentingVC ? : self.presentingViewController;
 }
 
@@ -63,3 +57,4 @@ static void *ggPresentingVCKey = &ggPresentingVCKey;
 }
 
 @end
+
