@@ -30,7 +30,7 @@ static NSString *GGNewTabJSCode;
         return nil;
     }
     
-    NSString *URLString = [[URL resourceSpecifier] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *URLString = [URL resourceSpecifier];
     NSString *baseURLString = [self stringByEvaluatingJavaScriptFromString:@"document.location.href"];
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     URL = [NSURL URLWithString:URLString relativeToURL:baseURL];

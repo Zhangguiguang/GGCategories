@@ -12,7 +12,8 @@
 
 - (void)gg_loadURLString:(NSString *)URLString {
     NSURL *url = [NSURL URLWithString:URLString];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.timeoutInterval = 60.0;
     [self loadRequest:request];
 }
 
